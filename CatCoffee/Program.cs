@@ -12,23 +12,15 @@ public class Program
         });
         
         string selectedCat = Console.ReadLine();
+        
         Console.Clear();
-        Cat cat = null;
-        switch (selectedCat)
-        {
-            case "1":
-                cat = new SmartyCat("Смарти", "Мяу");
-                break;
-            case "2":
-                cat = new LinyCat("Лини", "Мурр");
-                break;
-            case "3":
-                cat = new BlackyCat("Блэки", "Мяу мяу мяу");
-                break;
-            default:
-                Cosmetics.AnimatingString(new[] {"Некорректно указано число"});
-                break;
-        }
-        cat.Print();
+        int selectedCatInt = int.Parse(selectedCat);
+        
+        Cat[] cats = new Cat[4];
+        cats[1] = new SmartyCat("Смарти", "Мяу");
+        cats[2] = new LinyCat("Лини", "Мурр");
+        cats[3] = new BlackyCat("Блэки", "Мяу мяу мяу");
+        
+        cats[selectedCatInt].Print();
     }
 }
