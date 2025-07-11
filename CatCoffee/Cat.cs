@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace CatCoffee;
+﻿namespace CatCoffee;
 
 class Cat
 {
@@ -22,6 +20,7 @@ class Cat
         });
         
         string IsPet = Console.ReadLine();
+        
         switch (IsPet)
         {
             case "да":
@@ -34,6 +33,9 @@ class Cat
             default:
                 Console.Clear();
                 Cosmetics.AnimatingString(new[] { "Пожалуйста, введите 'да' или 'нет'." });
+                Console.ReadKey();
+                Console.Clear();
+                Print();
                 break;
         }
     }
@@ -51,35 +53,6 @@ class Cat
     }
 }
 
-class SmartyCat : Cat
-{
-    public SmartyCat(string name, string textHello) : base(name, textHello) { }
-    
-    public override void Pet(string name)
-    {
-        DoPetAnimation($"Вы гладите {name}, и она начинает читать философскую лекцию...");
-    }
-}
-
-class LinyCat : Cat
-{
-    public LinyCat(string name, string textHello) : base(name, textHello) { }
-    
-    public override void Pet(string name)
-    {
-        DoPetAnimation($"Вы гладите {name}, и она ложится спать к вам на колени...");
-    }
-}
-
-class BlackyCat : Cat
-{
-    public BlackyCat(string name, string textHello) : base(name, textHello) { }
-    
-    public override void Pet(string name)
-    {
-        DoPetAnimation($"Вы гладите {name}, и она запрыгивает вам на лицо...");
-    }
-}
 
 
 
