@@ -1,4 +1,6 @@
-﻿namespace CatCoffee;
+﻿using System.Runtime.InteropServices;
+
+namespace CatCoffee;
 
 class Cat
 {

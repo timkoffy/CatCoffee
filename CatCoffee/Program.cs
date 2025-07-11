@@ -13,26 +13,22 @@ public class Program
         
         string selectedCat = Console.ReadLine();
         Console.Clear();
+        Cat cat = null;
         switch (selectedCat)
         {
             case "1":
-                var smarty = new SmartyCat("Смарти", "Мяу");
-                smarty.Print();
+                cat = new SmartyCat("Смарти", "Мяу");
                 break;
-            
             case "2":
-                var liny = new LinyCat("Лини", "Мурр");
-                liny.Print();
+                cat = new LinyCat("Лини", "Мурр");
                 break;
-            
             case "3":
-                var blacky = new BlackyCat("Блэки", "Мяу мяу мяу");
-                blacky.Print();
+                cat = new BlackyCat("Блэки", "Мяу мяу мяу");
                 break;
-            
             default:
                 Cosmetics.AnimatingString(new[] {"Некорректно указано число"});
                 break;
         }
+        cat.Print();
     }
 }
